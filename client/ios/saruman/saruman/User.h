@@ -2,21 +2,22 @@
 //  User.h
 //  saruman
 //
-//  Created by Mauricio Leal on 2/25/14.
-//  Copyright (c) 2014 Mauricio Leal. All rights reserved.
+//  Created by Mauricio Leal on 3/4/14.
+//  Copyright (c) 2014 Mauricio "Maltron" Leal. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Role;
 
 @interface User : NSManagedObject
 
-@property (nonatomic, retain) UNKNOWN_TYPE id;
-@property (nonatomic, retain) UNKNOWN_TYPE username;
-@property (nonatomic, retain) UNKNOWN_TYPE password;
-@property (nonatomic, retain) UNKNOWN_TYPE fullName;
-@property (nonatomic, retain) UNKNOWN_TYPE enabled;
-@property (nonatomic, retain) NSManagedObject *role;
+@property (nonatomic, retain) NSNumber  *id;
+@property (nonatomic, retain) NSNumber *enabled;
+@property (nonatomic, retain) NSString *fullName;
+@property (nonatomic, retain) NSString *password;
+@property (nonatomic, retain) NSString *username;
+@property (nonatomic, retain) Role *role;
 
 @end
