@@ -55,7 +55,7 @@ public class User implements Serializable {
     private String fullName;
     
     @Column(name="ENABLED", nullable = false, columnDefinition = "TINYINT", unique = false, insertable = false, updatable = true)
-    @XmlElement(name="Enabled", type=Boolean.class, required=true)
+    @XmlElement(name="Enabled", type=boolean.class, required=true)
     private boolean enabled;
     
     @ManyToOne(fetch=FetchType.EAGER)
