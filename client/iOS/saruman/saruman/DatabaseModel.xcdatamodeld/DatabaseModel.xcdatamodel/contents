@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Role" representedClassName="Role" syncable="YES">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="0" maxValueString="20" syncable="YES"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="role" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="enabled" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" minValueString="0" maxValueString="40" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="password" attributeType="String" minValueString="0" maxValueString="40" syncable="YES"/>
+        <attribute name="username" attributeType="String" minValueString="0" maxValueString="35" syncable="YES"/>
+        <relationship name="role" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="user" inverseEntity="Role" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Role" positionX="0" positionY="0" width="128" height="88"/>
+        <element name="User" positionX="-272" positionY="90" width="128" height="133"/>
+    </elements>
+</model>
